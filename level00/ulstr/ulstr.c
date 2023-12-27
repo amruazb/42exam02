@@ -1,21 +1,21 @@
 #include <unistd.h>
 
-void ulstr(char *str)
+void ulstr(char *s)
 {
-	while(*str)
+	while(*s)
 	{
-		if (*str >= 'a' && *str <= 'z')
-			*str -= 32;
-		else if (*str >= 'A' && *str <= 'Z')
-			*str += 32;
-		write(1, str++, 1);
+		if(*s >= 'A' &&  *s <= 'Z')
+			*s += 32;
+		else if(*s >= 'a' && *s <= 'z')
+			*s -= 32;
+		write(1, s++, 1);
 	}
 }
+
 int main(int ac, char **av)
 {
 	if(ac == 2)
 		ulstr(av[1]);
 	write(1, "\n", 1);
-
 }
 
