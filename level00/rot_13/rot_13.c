@@ -4,9 +4,9 @@ void rot_13(char *str)
 {
 	while(*str)
 	{
-	       	if (*str >= 'a' && *str <= 'm' || *str >= 'A' && *str <= 'M')
+	       	if ((*str >= 'a' && *str <= 'm') || (*str >= 'A' && *str <= 'M'))
 			*str += 13;
-		else if(*str >= 'N' && *str <= 'Z' || *str >= 'n' && *str <= 'z')
+		else if((*str >= 'N' && *str <= 'Z') || (*str >= 'n' && *str <= 'z'))
 			*str -= 13;
 		write(1, str++,1);
 	}
