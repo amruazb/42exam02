@@ -2,10 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int ascending(int a, int b)
-{
-	return a > b;
-}
 
 
 void swap_nodes(t_list *a, t_list *b)
@@ -31,7 +27,14 @@ t_list *sort_list(t_list *lst, int (*cmp)(int, int))
 	return tmp;
 }
 
-void print_list(t_list *lst)
+//int main only for testing purpose
+
+/* int ascending(int a, int b)
+{
+	return a > b;
+} */
+
+/* void print_list(t_list *lst)
 {
 	while(lst)
 	{
@@ -39,9 +42,9 @@ void print_list(t_list *lst)
 		lst = lst->next;
 	}
 	printf("\n");
-}
+} */
 
-int main()
+/* int main()
 {
 	t_list *head = malloc(sizeof(struct s_list));
 	head->data = 38;
@@ -67,6 +70,6 @@ int main()
 		head = head->next;
 		free(temp);
 	}
-}
+} */
 
 
