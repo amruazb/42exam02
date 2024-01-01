@@ -14,7 +14,6 @@ void repeatalpha(char *str)
 			write(1, str, 1);
 			i--;
 		}
-		i = 1;
 		str++;
 	}
 }
