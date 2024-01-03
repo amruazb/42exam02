@@ -25,6 +25,8 @@ void	flood_fill(char **tab, t_point size, t_point begin)
 	fill(tab, size, begin, tab[begin.y][begin.x]);
 }
 
+//for checking purpose only
+
 /*char** make_area(char **zone, t_point size)
 {
     char** area = (char**)malloc(size.y * sizeof(char*));
