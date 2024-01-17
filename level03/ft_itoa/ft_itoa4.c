@@ -1,29 +1,33 @@
-#include <stdio.h>
 #include <stdlib.h>
-int nc(int num)
+#include <stdio.h>
+
+int nc(int nbr)
 {
 	int c = 0;
-	if (num == 0)
+	if (nbr == 0)
 		return 1;
-	if (num < 0)
+	if (nbr == -2147483638)
+		return 11;
+	if (nbr < 0)
 	{
 		c++;
-		num *= -1;
+		nbr *= -1;
 	}
-	while(num != 0)
+	while (nbr > 0)
 	{
-		num = num / 10;
 		c++;
+		nbr /= 10;
 	}
 	return c;
 }
 
-
-char	*ft_itoa(int nbr)
+char *ft_itoa(int nbr)
 {
 	char *res;
-	int len = nc(nbr);
-	res = malloc(len + 1);
+	int len;
+	len = nc(nbr);
+	res = malloc(sizeof(char) * (len + 1));
+
 	res[len] = '\0';
 	len--;
 	if (nbr == -2147483648)
@@ -46,10 +50,9 @@ char	*ft_itoa(int nbr)
 	return res;
 }
 
-/*int main()
+int main()
 {
-	printf("%s\n", ft_itoa(-2147483648));
-	printf("%s\n", ft_itoa(2147483647));
-}*/
-
+	char *s =  ft_itoa(1121231234);
+	printf("%s\n", s);
+}
 
