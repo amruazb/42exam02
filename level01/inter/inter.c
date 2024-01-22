@@ -3,7 +3,7 @@
 void inter(char *s1, char *s2)
 {
 	int ascii[256] = {0};
-
+	char *ps2 = s2;
 	while(*s2)
 	{
 		ascii[*s2] = 1;
