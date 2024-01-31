@@ -3,18 +3,17 @@
 void inter(char *s1, char *s2)
 {
 	int ascii[256] = {0};
-	char *ps2 = s2;
 	while(*s2)
 	{
-		ascii[*s2] = 1;
+		ascii[(unsigned char)*s2] = 1;
 		s2++;
 	}
 	while(*s1)
 	{
-		if (ascii[*s1] == 1)
+		if (ascii[(unsigned char)*s1] == 1)
 		{
 			write(1, s1, 1);
-			ascii[*s1] = 0;
+			ascii[(unsigned char)*s1] = 0;
 		}
 		s1++;
 	}
