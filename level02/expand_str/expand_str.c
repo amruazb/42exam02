@@ -6,9 +6,7 @@ void	epur(char *s)
 	int lastspace = 0;
 	while(*s && *s == ' ')
 		s++;
-	while(*s &&  *s == ' ')
-		s--;
-	while(*s && *s)
+	while(*s)
 	{
 		if(*s && *s  ==  ' ')
 		{
