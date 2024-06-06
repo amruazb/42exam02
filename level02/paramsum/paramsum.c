@@ -15,11 +15,7 @@ void	putnbr(int num)
 
 int main(int ac, char **av)
 {
-	int i = 0;
-	while(ac > i)
-	{
-		i++;
-	}
+	(void)av;
 	putnbr(ac - 1);
 	putstr("\n");
 }
